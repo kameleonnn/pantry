@@ -1,9 +1,5 @@
 <?php
 require_once __DIR__ . '/../src/bootstrap.php';
-$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-if ($request=='/register') {
-    require __DIR__ . '/../src/inc/register.php';
-}
 ?>
 
 <?php view('header', ['title' => 'Register - Pantry']) ?>

@@ -1,9 +1,5 @@
 <?php
 require_once __DIR__ . '/../src/bootstrap.php';
-$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-if ($request=='/login') {
-    require __DIR__ . '/../src/inc/login.php';
-}
 ?>
 
 <?php view('header', ['title' => 'Log in - Pantry']) ?>
