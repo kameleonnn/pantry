@@ -1,5 +1,5 @@
 <?php
-
+define('ASSET_PATH', getenv('DB_HOST') ? '': '/public');
 session_start();
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/commons/view.php';
