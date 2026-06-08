@@ -4,7 +4,6 @@ $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 switch ($request) {
     case '/':
     case '':
-        require __DIR__ . '/../src/inc/home.php'; 
         break;
     case '/register':
         require __DIR__ . '/../src/register.php';
