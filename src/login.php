@@ -23,22 +23,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     exit();
                 } else {
                     flash('incorrect_pass', 'Incorrect password.', FLASH_ERROR);
-                    header("location: /login");
+                    header("location: /login.php");
                     exit();
                 }
             } else {
                 flash('invalid_user', 'User does not exist.', FLASH_ERROR);
-                header("location: /login");
+                header("location: /login.php");
                 exit();
             }
         } else {
             flash('generic_err', 'Sorry, an unexpected error occured. Try again', FLASH_ERROR);
-            header("location: /login");
+            header("location: /login.php");
             exit();
         }
     } else {
         flash('empty_form', 'Please fill out the form.', FLASH_ERROR);
-        header("location: /login");
+        header("location: /login.php");
         exit();
     }
 }

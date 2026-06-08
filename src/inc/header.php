@@ -10,17 +10,17 @@
 
 <body>
     <header>
-        <h1><a class="brand" href="/public/index.php">Pantry</a></h1>
+        <h1><a class="brand" href="">Pantry</a></h1>
         <div id="buttons">
             <?php
             if (session_status() === PHP_SESSION_NONE) {
                 session_start();
             }
             if (!isset($_SESSION['user'])) {
-                echo '<button onclick="window.location.href=`login.php`">Log in</button><button onclick="window.location.href=`register.php`">Register</button>';
+                echo '<button onclick="window.location.href=`/login.php`">Log in</button><button onclick="window.location.href=`/register.php`">Register</button>';
             } else {
                 echo '<!--<button>Setings</button>-->
-            <button onclick="window.location.href=`/src/logout.php`">Log out</button>';
+            <button onclick="window.location.href=`/logout.php`">Log out</button>';
             }
             ?>
 

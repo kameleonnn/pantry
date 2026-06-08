@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Check connection
             if ($conn->connect_error) {
                 flash('connection_error', 'Connection failed. Try again later.', FLASH_ERROR);
-                header("location: /register");
+                header("location: /register.php");
                 die();
             }
             // Check if user already exists
@@ -27,27 +27,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $register->bind_param("sssi", $email, $name, $password, $tos_consent);
                 if ($register->execute()) {
                     flash('reg_success', 'Your account was created succesfully. Please <a href="login.php">log in</a> to use your Pantry account.', FLASH_SUCCESS);
-                    header("location: $previous");
+                    header("location: /register.php");
                     exit();
                 } else {
                     flash('generic_err', 'Sorry, an unexpected error occured. Try again', FLASH_ERROR);
-                    header("location: /register");
+                    header("location: /register.php");
                     exit();
                 }
             } else {
                 flash('reg_user_exists_err', 'This account already exists.', FLASH_ERROR);
-                header("location: /register");
+                header("location: /register.php");
                 exit();
             }
 
             $conn->close();
         } else {
-            header("location: /register");
+            header("location: /register.php");
             exit();
         }
     } else {
         flash('reg_empty_form', 'Please fill out all the information.', FLASH_ERROR);
-        header("location: /register");
+        header("location: /register.php");
         exit();
     }
 
