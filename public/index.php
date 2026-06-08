@@ -9,6 +9,9 @@ switch ($request) {
     case '/register':
         require __DIR__ . '/../src/register.php';
         break;
+    case '/login':
+        require __DIR__ . '/../src/login.php';
+        break;
     default:
         http_response_code(404);
         echo "404 - Page Not Found";
