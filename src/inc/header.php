@@ -13,7 +13,9 @@
         <h1><a class="brand" href="/public/index.php">Pantry</a></h1>
         <div id="buttons">
             <?php
-            session_start();
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
             if (!isset($_SESSION['user'])) {
                 echo '<button onclick="window.location.href=`login.php`">Log in</button><button onclick="window.location.href=`register.php`">Register</button>';
             } else {
