@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Playwrite+AU+VIC+Guides&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
+* {
+    font-family: 'Google Sans Flex';
+    margin: 0;
+}
+
+a {
+    color: #1b3d29;
+}
+
+body {
+    height: 100%;
+}
+
+body,
+footer,
+main,
+form div,
+form input[type=submit] {
+    width: 100%;
+}
+
+button {
+    background-color: #bccfb9;
+    border: 1px solid #aabea8;
+    border-radius: 3px;
+    color: #163120;
+    margin: 12px 5px;
+    min-width: 75px;
+    padding: 5px;
+}
+
+button.small-button {
+    padding: 0px;
+    margin-top: -5px;
+    margin: 2px;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    background-color: #2d533c;
+    border: 1px solid #2d533c;
+}
+
+footer {
+    background-color: #101b14;
+    bottom: 0;
+    height: 50px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+form .brand {
+    font-size: 20pt;
+    font-style: italic;
+    margin: 0 5px;
+}
+
+form input {
+    background-color: #dae6db;
+    border: 1px solid #bed8bf;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 96%;
+}
+
+form input[type=checkbox] {
+    accent-color: #101b14;
+    width: fit-content;
+}
+
+form input[type=submit] {
+    background-color: #bccfb9;
+    border: 1px solid #aabea8;
+    border-radius: 3px;
+    color: #163120;
+    margin-top: 10px;
+}
+
+form label,
+form span {
+    font-size: 11pt;
+}
+
+form {
+    align-items: center;
+    border-radius: 5px;
+    height: fit-content;
+    justify-content: center;
+    margin: 5px;
+    min-height: 30%;
+    padding: 40px;
+    top: -50px;
+}
+
+form,
+form .brand,
+footer,
+main #landing {
+    color: #FFF;
+}
+
+form,
+header,
+main {
+    display: flex;
+}
+
+form,
+main #landing {
+    flex-direction: column;
+}
+
+form,
+main #landing,
+#contents section {
+    position: relative;
+}
+
+form,
+main #landing,
+#sidemenu {
+    background-color: #3a6b4d;
+    border: 1px solid #2c533b;
+}
+
+form,
+main #landing,
+#sidemenu,
+#contents section {
+    box-shadow: 0 0 10px #101b14;
+}
+
+h1 {
+    font-family: "Story Script";
+    font-size: 32pt;
+}
+
+header #buttons {
+    right: 12px;
+}
+
+header #buttons,
+footer,
+main {
+    position: fixed;
+}
+
+header h1 {
+    font-size: 24pt;
+}
+
+header {
+    flex-direction: row;
+    margin-left: 25px;
+    padding-top: 5px;
+}
+
+header,
+#sidemenu {
+    padding: 10px;
+}
+
+main #landing .brand {
+    color: #bccfb9;
+    font-size: 16pt;
+}
+
+main #landing a {
+    color: #13291b;
+}
+
+main #landing button {
+    color: #163120;
+    font-size: 20pt;
+    height: 22%;
+    min-height: fit-content;
+    width: 70%;
+}
+
+main #landing h3 {
+    font-weight: 500;
+}
+
+main #landing p {
+    font-size: 12pt;
+}
+
+main #landing {
+    border-radius: 7px;
+    height: 40%;
+    padding: 10% 30px 30px;
+    text-align: center;
+    width: 40%;
+}
+
+main {
+    align-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, #2c5e5e9d, #2c5e5e95), url("/../src/resources/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 70px;
+    flex-direction: row;
+    justify-content: center;
+    top: 70px;
+}
+
+main#dashboard {
+    align-items: initial;
+    color: #e8f1e9;
+}
+
+.alert {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.alert-error {
+    background-color: #bb6a6a;
+    border-color: #8b1e1e;
+}
+
+.alert-success {
+    background-color: #97ce97;
+    border-color: #265c26;
+}
+
+.brand {
+    color: #000;
+    font-family: 'Playwrite GB J';
+    font-weight: 900;
+    text-decoration: none;
+}
+
+#sidemenu,
+#contents,
+#contents section {
+    margin: 10px;
+}
+
+#contents section {
+    background-color: #87aa95;
+    border: 1px solid #5e7a69;
+    border-radius: 4px;
+    height: 89%;
+    margin-left: -10px;
+    margin-right: 0;
+    padding: 10px;
+}
+
+#contents {
+    padding-top: 10px;
+    width: 70%;
+}
+
+#sidemenu {
+    border-radius: 4px;
+    width: 50%;
+}
+
+button:active,
+form input[type=submit]:active {
+    background-color: #708872;
+    border-color: #586b59;
+}
+
+button:hover,
+form input[type=submit]:hover {
+    background-color: #97b499;
+    border-color: #79947b;
+}
+
+#side-topbar {
+    display: flex;
+    flex-direction: row;
+}
+
+summary {
+    display: flex;
+}
+
+details .pantry-actions {
+    display: none;
+}
+
+summary{
+    marker: url("/src/resources/fold-light.png");
+}
+
+li[pantry-id] details[open] {
+    background-color: #1b3d29;
+    border: 1px solid #00000000;
+    border-radius: 7px;
+
+}
+
+details {
+    border-bottom: 1px solid #2d533c;
+    margin: 10px;
+    padding: 10px;
+}
+
+details[open] .pantry-actions {
+    display: flex;
+}
+
+.hidden {
+    visibility: collapse;
+}
+
+li[item-id] {
+    height: 70px;
+    max-height: 50px;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    height: min-content;
+}
+
+.item-name {
+    width: max-content;
+    min-width: calc(100% - 150px);
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li[pantry-id] {
+
+    list-style: none;
+
+}
+
+.item-actions {
+    width: 150px;
+    position: relative;
+    display: flex;
+    right: 0px;
+}
+
+.meatball {
+    position: absolute;
+    right: 75px;
+    top: 100%;
+    right: 60px;
+    height: min-content;
+    width: 75px;
+    min-width: 90px;
+    background-color: white;
+    color: #101b14;
+    z-index: 150;
+}
+.meatball button{
+    margin: 2px;
+}
+
+input[type="number"] {
+    width: 50px;
+    height: 26px;
+    margin-top: 2px;
+    margin-right: 2px;
+    color: white;
+    background-color: #00000000;
+    border: 1px solid #2d533c;
+}
