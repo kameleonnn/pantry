@@ -23,3 +23,5 @@ jobs:
         run: |
           docker build -t ${{ secrets.AZURE_REGISTRY_SERVER }}/pantry-web:latest .
           docker push ${{ secrets.AZURE_REGISTRY_SERVER }}/pantry-web:latest
+          docker build -t ${{ secrets.AZURE_REGISTRY_SERVER }}/pantry-web:${{ github.run_number }} .
+          docker push ${{ secrets.AZURE_REGISTRY_SERVER }}/pantry-web:${{ github.run_number }}
