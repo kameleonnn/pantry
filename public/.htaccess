@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine On isn't a real file or directory
+    RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php [QSA,L]
