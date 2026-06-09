@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1><a class="brand" href="index.php">Pantry</a></h1>
+        <h1><a class="brand" href="index.php">Pantry</a> - test</h1>
         <div id="buttons">
             <?php
             if (session_status() === PHP_SESSION_NONE) {
