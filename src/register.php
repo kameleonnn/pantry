@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . 'bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $previous = "/../register.php";
     if (isset($_POST['email'], $_POST['name'], $_POST['password'], $_POST['passconfirm'], $_POST['tos'])) {
