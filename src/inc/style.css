@@ -200,7 +200,7 @@ main #landing {
 main {
     align-content: center;
     align-items: center;
-    background-image: linear-gradient(0deg, #2c5e5e9d, #2c5e5e95), url("/background.jpg");
+    background-image: linear-gradient(0deg, #2c5e5e9d, #2c5e5e95), url("../background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     bottom: 70px;
