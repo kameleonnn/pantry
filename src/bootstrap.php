@@ -1,7 +1,4 @@
 <?php
-if (!defined('ASSET_PATH')) {
-    define('ASSET_PATH', getenv('DB_HOST') ? '' : '/public');
-}
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }

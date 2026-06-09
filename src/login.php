@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/bootstrap.php';
-$previous = "/public/login.php";
+require_once __DIR__ . 'bootstrap.php';
+$previous = "/../login.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['email'], $_POST['password'])) {
         $email = $_POST['email'];

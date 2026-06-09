@@ -29,4 +29,4 @@
         </section>
     </div>
 </main>
-<script src="/script.js"></script>
+<script src="/../script.js"></script>

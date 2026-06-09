@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../src/bootstrap.php';
+require_once __DIR__ . '/src/bootstrap.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once __DIR__ . '/../src/register.php';
+    require_once __DIR__ . '/src/register.php';
     exit;
 }
 ?>
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </label>
         </div>
         <input type="submit" value="Register"><br>
-        <span>Already have an account? <a href="/login">Log in</a></span>
+        <span>Already have an account? <a href="/login.php">Log in</a></span>
     </form>
 </main>
 <?php view('footer') ?>

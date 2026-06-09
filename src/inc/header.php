@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title><?= $title ?? 'Pantry' ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,10 +17,10 @@
                 session_start();
             }
             if (!isset($_SESSION['user'])) {
-                echo '<button onclick="window.location.href=`/login.php`">Log in</button><button onclick="window.location.href=`/register.php`">Register</button>';
+                echo '<button onclick="window.location.href=`/../login.php`">Log in</button><button onclick="window.location.href=`/../register.php`">Register</button>';
             } else {
                 echo '<!--<button>Setings</button>-->
-            <button onclick="window.location.href=`/logout.php`">Log out</button>';
+            <button onclick="window.location.href=`logout.php`">Log out</button>';
             }
             ?>
 
