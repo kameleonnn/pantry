@@ -8,6 +8,10 @@ $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+$conn->query("DROP TABLE IF EXISTS pantries;");
+$conn->query("DROP TABLE IF EXISTS users;");
+
 ensure_tables_exist($conn);
 
 
@@ -15,6 +19,7 @@ function ensure_tables_exist($conn){
     $table_check = $conn->query("SHOW TABLES LIKE 'users'");
 
     if ($table_check->num_rows == 0) {
+        $conn->query("SET FOREIGN_KEY_CHECKS = 0;");
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         try {
             // Create the USERS table
@@ -39,6 +44,7 @@ function ensure_tables_exist($conn){
 
 
         } catch (mysqli_sql_exception $e) {
+            die("DATABASE INITIALIZATION CRASHED: " . $e->getMessage());
             error_log("Database Auto-Initialization Failed: " . $e->getMessage());
         }
     }

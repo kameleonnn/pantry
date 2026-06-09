@@ -8,12 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $password = $_POST['password'];
         $pass_conf = $_POST['passconfirm'];
         $tos_consent = $_POST['tos'];
-
         // validate form data
         if (validate_form($email, $name, $password, $pass_conf, $tos_consent)) {
             // hash password
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-            $register = "SELECT id from users where email='$email'";
+            $register = "SELECT id from users where email='".$email."'";
             // Check connection
             if ($conn->connect_error) {
                 flash('connection_error', 'Connection failed. Try again later.', FLASH_ERROR);
