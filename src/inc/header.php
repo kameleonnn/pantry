@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title><?= $title ?? 'Pantry' ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <header>
-        <h1><a class="brand" href="">Pantry</a></h1>
+        <h1><a class="brand" href="index.php">Pantry</a></h1>
         <div id="buttons">
             <?php
             if (session_status() === PHP_SESSION_NONE) {
@@ -20,7 +20,7 @@
                 echo '<button onclick="window.location.href=`/../login.php`">Log in</button><button onclick="window.location.href=`/../register.php`">Register</button>';
             } else {
                 echo '<!--<button>Setings</button>-->
-            <button onclick="window.location.href=`logout.php`">Log out</button>';
+            <button onclick="window.location.href=`/src/logout.php`">Log out</button>';
             }
             ?>
 

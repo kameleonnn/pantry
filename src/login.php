@@ -19,26 +19,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (password_verify($password, $hash['password'])) {
                     $_SESSION['user'] = $hash['id'];
                     $_SESSION['name'] = $hash['name'];
-                    header("location: /");
+                    header("location: /../index.php");
                     exit();
                 } else {
                     flash('incorrect_pass', 'Incorrect password.', FLASH_ERROR);
-                    header("location: /login.php");
+                    header("location: $previous");
                     exit();
                 }
             } else {
                 flash('invalid_user', 'User does not exist.', FLASH_ERROR);
-                header("location: /login.php");
+                header("location: $previous");
                 exit();
             }
         } else {
             flash('generic_err', 'Sorry, an unexpected error occured. Try again', FLASH_ERROR);
-            header("location: /login.php");
+            header("location: $previous");
             exit();
         }
     } else {
         flash('empty_form', 'Please fill out the form.', FLASH_ERROR);
-        header("location: /login.php");
+        header("location: $previous");
         exit();
     }
 }

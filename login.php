@@ -1,14 +1,10 @@
 <?php
 require_once __DIR__ . '/src/bootstrap.php';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once __DIR__ . '/src/login.php';
-    exit;
-}
 ?>
 
 <?php view('header', ['title' => 'Log in - Pantry']) ?>
 <main>
-    <form id="login" action="/login.php" method="post">
+    <form id="login" action="src/login.php" method="post">
         <h1>Welcome back!</h1>
         <?php flash() ?>
         <div>

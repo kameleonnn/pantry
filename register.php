@@ -1,15 +1,11 @@
 <?php
 require_once __DIR__ . '/src/bootstrap.php';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once __DIR__ . '/src/register.php';
-    exit;
-}
 ?>
 
 <?php view('header', ['title' => 'Register - Pantry']) ?>
 <?php ?>
 <main>  
-    <form id="register" action="/register.php" method="post">
+    <form id="register" action="src/register.php" method="post">
         <h1>Welcome to<span class="brand">Pantry</span>!</h1>
         <?php flash() ?>
         <div>
@@ -35,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </label>
         </div>
         <input type="submit" value="Register"><br>
-        <span>Already have an account? <a href="/login.php">Log in</a></span>
+        <span>Already have an account? <a href="login.php">Log in</a></span>
     </form>
 </main>
 <?php view('footer') ?>
