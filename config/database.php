@@ -9,11 +9,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$conn->query("DROP TABLE IF EXISTS shopping_list;");
-$conn->query("DROP TABLE IF EXISTS pantry_item;");
-$conn->query("DROP TABLE IF EXISTS pantries;");
-$conn->query("DROP TABLE IF EXISTS users;");
-
 ensure_tables_exist($conn);
 
 function ensure_tables_exist($conn){
